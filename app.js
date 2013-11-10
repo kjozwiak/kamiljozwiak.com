@@ -2,7 +2,8 @@ var express = require('express');
 
 // Configuration
 const PORT = 22935;
-const AUDIENCE = "http://localhost:" + PORT
+const AUDIENCE = "http://localhost:" + PORT;
+const NAME = "Kamil Jozwiak - ";
 
 var app = express();
 
@@ -12,7 +13,7 @@ app.set('view options', { layout: false, prett: true });
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
-  res.render('index', { pageTitle: 'Home'});
+  res.render('index', { pageTitle: NAME + 'Blog'});
 });
 
 app.listen(PORT, function() {
