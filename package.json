@@ -1,0 +1,21 @@
+{
+  "name": "myBlog",
+  "description": "Kamil Jozwiak's Blog",
+  "version": "0.1.0",
+  "main": "app.js",
+  "dependencies": {
+    "express": "~3.4.0",
+    "jade": "~0.35.0"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kjozwiak/kamiljozwiak.com"
+  },
+
+  "author": "Kamil Jozwiak",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/kjozwiak/kamiljozwiak.com/issues"
+  }
+}

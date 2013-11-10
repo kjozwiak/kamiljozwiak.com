@@ -1,0 +1,12 @@
+doctype 5
+html(lang="en")
+  head
+    title= pageTitle
+
+  body(id= bodyID)
+    block mainContent
+    a(href='https://twitter.com/kamiljozwiak', target='_blank')
+      img(src='/static/img/twitter-icon.png')
+    a(href='https://github.com/kjozwiak/', target='_blank')
+      img(src='/static/img/github-icon.png')
+    a(href='https://bugzilla.mozilla.org/user_profile?login=kamiljoz%40gmail.com', target='_blank')
