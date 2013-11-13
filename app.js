@@ -1,11 +1,10 @@
-var express = require('express');
+var express = require('express'),
+    app = express();
 
 // Configuration
 const PORT = 22935;
 const AUDIENCE = "http://localhost:" + PORT;
 const NAME = "Kamil Jozwiak - ";
-
-var app = express();
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
