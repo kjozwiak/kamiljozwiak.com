@@ -1,26 +1,38 @@
 body {
-  display: block;
-  margin: 0px auto;
+  margin: 0 auto;
+  text-align: center;
 }
 
-#image.header {
-  display: block;
-  margin: 0px auto;
+#header {
+  position: relative;
+  width: 850px;
+  height: 200px;
+  margin: 0 auto;
 }
 
-#title.header {
+#blogTitle {
   position: absolute;
-  padding: 0px 275px;
+  left: 10px;
   top: 140px;
-  color: white;
   font-size: 24px;
-  font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+  color: white;
   text-decoration: none;
 }
 
-#social.header {
-  position: relative;
-  display: inline;
-  left: 270px;
-  top: -195px;
+#twitter {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+
+#github {
+  position: absolute;
+  top: 5px;
+  left: 45px;
+}
+
+#mozilla {
+  position: absolute;
+  top: 5px;
+  left: 80px;
 }
