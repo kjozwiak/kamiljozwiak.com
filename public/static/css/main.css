@@ -1,4 +1,25 @@
-IMG.header {
-    display: block;
-    margin: 0 auto;
+body {
+  display: block;
+  margin: 0px auto;
+}
+
+#image.header {
+  display: block;
+  margin: 0px auto;
+}
+
+#title.header {
+  position: absolute;
+  padding: 0px 275px;
+  top: 140px;
+  color: white;
+  font-size: 24px;
+  font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+}
+
+#social.header {
+  position: relative;
+  display: inline;
+  left: 270px;
+  top: -195px;
 }
