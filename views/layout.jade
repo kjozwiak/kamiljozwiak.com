@@ -4,26 +4,25 @@ html(lang="en")
     title= pageTitle
     link(rel='shortcut icon' href='/static/img/favicon.ico')
     link(rel='stylesheet' type='text/css' href='/static/css/main.css')
+    script(type='text/javascript', src='/static/js/analytics.js')
 
   body(id=bodyID)
 
-  .header
-    img#image.header(src='/static/img/header.jpg')
-    a#title.header(href='/', style='text-decoration: none') Kamil Jozwiak's Blog
-    a#social.header(href='https://twitter.com/kamiljozwiak', target='_blank')
-      img(src='/static/img/twitter-icon.png')
-    a#social.header(href='https://github.com/kjozwiak/', target='_blank')
-      img(src='/static/img/github-icon.png')
-    a#social.header(href='https://bugzilla.mozilla.org/user_profile?login=kamiljoz%40gmail.com', target='_blank')
-      img(src='/static/img/firefox-icon.png')
+    .header
+      img#image.header(src='/static/img/header.jpg')
+      a#title.header(href='/') Kamil Jozwiak's Blog
+      a#social.header(href='https://twitter.com/kamiljozwiak', target='_blank')
+        img(src='/static/img/twitter-icon.png')
+      a#social.header(href='https://github.com/kjozwiak/', target='_blank')
+        img(src='/static/img/github-icon.png')
+      a#social.header(href='https://bugzilla.mozilla.org/user_profile?login=kamiljoz%40gmail.com', target='_blank')
+        img(src='/static/img/firefox-icon.png')
 
-  div
-    ul
-      li Home
-      li Resume
-      li Links
-      li About Me
+    div
+      ul
+        li Home
+        li Resume
+        li Links
+        li About Me
 
     block mainContent
-
-  script(type='text/javascript', src='/static/js/analytics.js')
