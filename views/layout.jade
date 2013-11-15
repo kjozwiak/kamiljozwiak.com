@@ -12,11 +12,11 @@ html(lang="en")
       a#logo(href='/') Kamil Jozwiak's Blog
       #socialmediacontainer
         ul#socialnav
-          li.linksocial(href='https://twitter.com/kamiljozwiak', target='_blank')
-            img(src='/static/img/twitter-icon.png')
-          li.linksocial(href='https://github.com/kjozwiak/', target='_blank')
-            img(src='/static/img/github-icon.png')
-          li.linksocial(href='https://bugzilla.mozilla.org/user_profile?login=kamiljoz%40gmail.com', target='_blank')
-            img(src='/static/img/firefox-icon.png')
+          li.linksocial: a(href='https://twitter.com/kamiljozwiak', target='_blank')
+              img(src='/static/img/twitter-icon.png')
+          li.linksocial: a(href='https://github.com/kjozwiak/', target='_blank')
+              img(src='/static/img/github-icon.png')
+          li.linksocial: a(href='https://bugzilla.mozilla.org/user_profile?login=kamiljoz%40gmail.com', target='_blank')
+              img(src='/static/img/firefox-icon.png')
 
     block mainContent
