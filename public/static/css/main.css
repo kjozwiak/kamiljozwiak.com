@@ -5,12 +5,11 @@ body {
 
 #headercontainer {
   position: relative;
-  width: 850px;
-  height: 100%;
+  background-color: #000000;
   margin: 0 auto;
 }
 
-#headercontainer a#logo {
+#logo {
   position: absolute;
   left: 10px;
   top: 140px;
@@ -19,17 +18,62 @@ body {
   text-decoration: none;
 }
 
-#headcontainer, #socialmediacontainer {
+#socialmediacontainer {
   position: absolute;
-  top: 5px;
+  right: 10px;
+  top: 0px;
 }
 
-#socialmediacontainer, ul#socialnav {
-  margin: auto 5px;
-  padding: 0px;
+#socialnav {
   list-style-type: none;
 }
 
 .linksocial {
   float: left;
+}
+
+#navmenu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#navmenu li {
+  margin: 0;
+  padding: 0;
+}
+
+#navmenu a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+#navmenu {
+  height: 70px;
+  background-color: #232323;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+  width: auto;
+}
+
+#navmenu > ul > li {
+  float: left;
+  margin-left: 15px;
+  position: relative;
+}
+
+#navmenu > ul > li > a {
+  color: #a0a0a0;
+  font-family: Verdana, 'Lucida Grande';
+  font-size: 15px;
+  line-height: 70px;
+  padding: 15px 20px;
+  -webkit-transition: color .15s;
+  -moz-transition: color .15s;
+  -o-transition: color .15s;
+  transition: color .15s;
+}
+
+#navmenu > ul > li > a:hover {
+  color: #ffffff;
 }
