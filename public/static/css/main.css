@@ -3,14 +3,14 @@ body {
   text-align: center;
 }
 
-#header {
+#headercontainer {
   position: relative;
   width: 850px;
-  height: 200px;
+  height: 100%;
   margin: 0 auto;
 }
 
-#blogTitle {
+#headercontainer a#logo {
   position: absolute;
   left: 10px;
   top: 140px;
@@ -19,20 +19,17 @@ body {
   text-decoration: none;
 }
 
-#twitter {
+#headcontainer, #socialmediacontainer {
   position: absolute;
-  top: 5px;
-  left: 10px;
+  top: 10px;
 }
 
-#github {
-  position: absolute;
-  top: 5px;
-  left: 45px;
+#socialmediacontainer, #socialnav {
+  margin: auto 10px;
+  padding: 0px;
+  list-style-type: none;
 }
 
-#mozilla {
-  position: absolute;
-  top: 5px;
-  left: 80px;
+.linksocial {
+  float: left;
 }
