@@ -98,18 +98,17 @@ html, body {
 
 #footer {
   position: absolute;
-  clear: both;
   margin 0px auto;
   left: 0px;
   right: 0px;
   bottom: 0px;
-  height: 30px;
+  height: 40px;
   background-color: #232323;
 }
 
 #footer li {
   display: inline-block;
-  vertical-align: middle;
+  list-style-type: none
 }
 
 #footer a {
@@ -120,16 +119,18 @@ html, body {
 #footer ul.navigationbottom {
   position: absolute;
   left: 15px;
-  font-family: Verdana, 'Lucida Grande';
+  margin: 10px;
   font-size: 15px;
+  font-family: Verdana, 'Lucida Grande';
   color: #a0a0a0;
 }
 
 #footer ul.bottomcontent {
+  text-align: center;
+  margin: 10px;
   font-size: 15px;
   font-family: Verdana, 'Lucida Grande';
   color: #a0a0a0;
-  text-align: center;
 }
 
 #footer ul.navigationbottom li + li::before {
