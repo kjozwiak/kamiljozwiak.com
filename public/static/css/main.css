@@ -105,12 +105,34 @@ html, body {
   bottom: 0px;
   height: 30px;
   background-color: #232323;
+}
+
+#footer li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#footer a {
+  color: #a0a0a0;
+  text-decoration: none;
+}
+
+#footer ul.navigationbottom {
+  position: absolute;
+  left: 15px;
+  font-family: Verdana, 'Lucida Grande';
+  font-size: 15px;
+  color: #a0a0a0;
+}
+
+#footer ul.bottomcontent {
+  font-size: 15px;
+  font-family: Verdana, 'Lucida Grande';
+  color: #a0a0a0;
   text-align: center;
 }
 
-#footercontent {
-  font-size: 15px;
-  color: #a0a0a0;
-  font-family: Verdana, 'Lucida Grande';
-  vertical-align: middle;
+#footer ul.navigationbottom li + li::before {
+  content: "/";
+  padding: 10px;
 }
