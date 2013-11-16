@@ -1,12 +1,30 @@
-body {
-  margin: 0 auto;
-  text-align: center;
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html, body {
+  height: 100%;
 }
 
 #headercontainer {
+  width: 100%;
+  min-height: 100%;
   position: relative;
+  overflow: hidden;
+}
+
+#header  {
+  height: 174px;
   background-color: #000000;
-  margin: 0 auto;
+}
+
+#imageheader {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #logo {
@@ -15,37 +33,37 @@ body {
   top: 140px;
   font-size: 24px;
   color: white;
+  font-family: Verdana, 'Lucida Grande';
   text-decoration: none;
 }
 
-#socialmediacontainer {
-  position: absolute;
-  right: 10px;
-  top: 0px;
-}
-
 #socialnav {
-  list-style-type: none;
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  top: 5px;
+  right: 10px;
+  list-style: none;
 }
 
-.linksocial {
-  float: left;
+#socialnav li {
+  float: left
 }
 
 #navmenu ul {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   list-style: none;
 }
 
 #navmenu li {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
 
 #navmenu a {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   text-decoration: none;
 }
 
@@ -76,4 +94,23 @@ body {
 
 #navmenu > ul > li > a:hover {
   color: #ffffff;
+}
+
+#footer {
+  position: absolute;
+  clear: both;
+  margin 0px auto;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 30px;
+  background-color: #232323;
+  text-align: center;
+}
+
+#footercontent {
+  font-size: 15px;
+  color: #a0a0a0;
+  font-family: Verdana, 'Lucida Grande';
+  vertical-align: middle;
 }
