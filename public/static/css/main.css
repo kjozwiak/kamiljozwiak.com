@@ -39,7 +39,6 @@ html, body {
 
 #socialnav {
   position: absolute;
-  margin: 0px;
   padding: 0px;
   top: 5px;
   right: 10px;
@@ -47,7 +46,8 @@ html, body {
 }
 
 #socialnav li {
-  float: left
+  display: inline-block;
+  margin: 0px 0px 0px 10px;
 }
 
 #navmenu ul {

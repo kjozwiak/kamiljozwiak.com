@@ -4,6 +4,7 @@ html(lang="en")
     title= pageTitle
     link(rel='shortcut icon' href='/static/img/favicon.ico')
     link(rel='stylesheet' type='text/css' href='/static/css/main.css')
+    link(rel='stylesheet' href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css')
     script(type='text/javascript', src='/static/js/analytics.js')
 
   body(id=bodyID)
@@ -13,11 +14,13 @@ html(lang="en")
         a#logo(href='/') Kamil Jozwiak's Blog
         ul#socialnav
           li: a(href='https://twitter.com/kamiljozwiak', target='_blank')
-            img(src='/static/img/twitter-icon.png')
+            i(class='fa fa-twitter-square fa-inverse fa-2x')
           li: a(href='https://github.com/kjozwiak/', target='_blank')
-            img(src='/static/img/github-icon.png')
+            i(class='fa fa-github-square fa-inverse fa-2x')
+          li: a(href='http://ca.linkedin.com/pub/kamil-jozwiak/16/140/207/', target='_blank')
+            i(class='fa fa-linkedin-square fa-inverse fa-2x')
           li: a(href='https://bugzilla.mozilla.org/user_profile?login=kamiljoz%40gmail.com', target='_blank')
-            img(src='/static/img/firefox-icon.png')
+            i(class='fa fa-bug fa-inverse fa-2x')
 
       #navmenu
         ul
