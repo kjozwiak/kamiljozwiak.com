@@ -96,6 +96,16 @@ html, body {
   color: #ffffff;
 }
 
+#content {
+  margin-top: 30px;
+  left: 0px;
+  right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  word-wrap: break-word;
+  width: 900px
+}
+
 #footer {
   position: absolute;
   margin 0px auto;

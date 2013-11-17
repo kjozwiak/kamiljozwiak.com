@@ -25,16 +25,17 @@ html(lang="en")
       #navmenu
         ul
           li: a(href='/'): span Home
-          li: a(href='/'): span Resume
+          li: a(href='/resume'): span Resume
           li: a(href='/'): span About
           li: a(href="/"): span Contact
 
-      block mainContent
+      #content
+        block mainContent
 
       #footer
         ul.navigationbottom
           li: a(href='/') Home
-          li: a(href='/') Resume
+          li: a(href='/resume') Resume
           li: a(href='/') About
           li: a(href='/') Contact
         ul.bottomcontent
