@@ -1,18 +1,38 @@
 extends layout
 
+block resumeHeader
+  link(rel='stylesheet' type='text/css' href='/static/css/resume.css')
+
 block mainContent
-  h2 Kamil Jozwiak's Resume
-  h3 kamiljoz@gmail.com
+  #resumecontainer
+    h2 Kamil Jozwiak's Resume
+    h3 kamiljoz@gmail.com
 
-  p
-    h4 Technical Proficiency
+    #technical
+    h3 Technical Proficiency:
+    #lists
+      ul
+        li Strong understanding of SDLC and PMLC methodologies
+        li Multi-tiered technical support skills (L1, L2 and L3 support)
+        li Strong understanding of IT Security (Computer, Network, Policies and Methodologies)
+        li Familiar with database concepts namely MSSQL, SQLite
+        li Windows, Linux, OSX
+        li Using bug tracking and QA software (JIRA, BugZilla, Basecamp, Glasscubes)
+        li Virtualization (VMware ESXi, VMware Workstation/Server, VirtualBox)
+        li XUL, XPCOM
+        li JavaScript, CSS
+        li Node, jade, express
 
-    ul
-      li Strong understanding of SDLC and PMLC methodologies
-      li Multi-tiered technical support skills (L1, L2 and L3 support)
-      li Strong understanding of IT Security (Computer, Network, Policies and Methodologies)
-      li Familiar with database concepts namely MSSQL, SQLite
-      li Windows, Linux, OSX
-      li Using bug tracking and QA software (JIRA, BugZilla, Basecamp, Glasscubes)
-      li Virtualization technology (VMware ESXi, VMware Workstation/Server, VirtualBox)
-      li JavaScript , XUL, XPCOM, node.js, CSS
+    h3 Professional Experience:
+
+    #experience
+      h4 Mozilla
+      | Toronto, Ontario - October 2012 - Present (Volunteer Firefox Tester)
+      #lists
+        ul
+          li Testing and verifying that issues have been resolved
+          li Using virtualization software to ensure the issue has been fixed on multiple platforms
+          li Firefox Metro iteration testing and triage
+          li Communicating and coordinating with Firefox QA Lead on what needs to be tested and verified
+          li Implemented automated mochitests
+          li Moderating monthly QA test days
