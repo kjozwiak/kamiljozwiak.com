@@ -7,7 +7,7 @@ html(lang="en")
     link(rel='stylesheet' href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css')
     script(type='text/javascript', src='/static/js/analytics.js')
 
-    block resumeHeader
+    block contentHeader
 
   body(id=bodyID)
     #headercontainer
@@ -31,8 +31,9 @@ html(lang="en")
           li: a(href='/'): span About
           li: a(href="/"): span Contact
 
-      #content
-        block mainContent
+      #mainContentArea
+        #content
+          block mainContent
 
       #footer
         ul.navigationbottom
