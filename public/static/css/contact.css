@@ -1,0 +1,20 @@
+#contactcontainer {
+  font-family: Verdana, 'Lucida Grande';
+  font-size: 13px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+}
+
+#spacingbottomtop {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#indentlists {
+  padding-left: 30px;
+}
+
+#pgpblock {
+  white-space: pre;
+}

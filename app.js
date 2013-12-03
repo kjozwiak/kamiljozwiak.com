@@ -19,6 +19,10 @@ app.get('/resume', function(req, res) {
   res.render('resume', { pageTitle: NAME + 'Resume'});
 });
 
+app.get('/contact', function(req, res) {
+  res.render('contact', { pageTitle: NAME + 'Resume'});
+});
+
 app.listen(PORT, function() {
   console.log("Starting server on port %d in %s mode:", PORT, app.settings.env);
 });
