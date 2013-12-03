@@ -6,14 +6,8 @@
   margin-right: auto;
 }
 
-html, body {
-  height: 100%;
-}
-
 #headercontainer {
   width: 1000px;
-  min-height: 100%;
-  overflow: hidden;
 }
 
 #header  {
@@ -22,7 +16,7 @@ html, body {
 }
 
 #imageheader {
-  position: absolute;
+  position relative;
   left: 0px;
   right: 0px;
   margin-left: auto;
@@ -99,7 +93,7 @@ html, body {
 }
 
 #mainContentArea {
-  position: absolute;
+  position: relative;
   border: 5px solid #232323;
   border-top: none;
   border-bottom: none;
@@ -110,19 +104,14 @@ html, body {
   margin-right: auto;
 }
 
-#content {
-  word-wrap: break-word;
-}
-
 #footer {
-  position: absolute;
+  position: relative;
   margin 0px auto;
   left: 0px;
   right: 0px;
   bottom: 0px;
   height: 40px;
   background-color: #232323;
-  box-shadow: 0px 60px 100px rgba(0, 0, 0, 0.4);
 }
 
 #footer li {
