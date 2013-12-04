@@ -20,7 +20,11 @@ app.get('/resume', function(req, res) {
 });
 
 app.get('/contact', function(req, res) {
-  res.render('contact', { pageTitle: NAME + 'Resume'});
+  res.render('contact', { pageTitle: NAME + 'Contact'});
+});
+
+app.get('/about', function(req, res) {
+  res.render('about', { pageTitle: NAME + 'About'});
 });
 
 app.listen(PORT, function() {
