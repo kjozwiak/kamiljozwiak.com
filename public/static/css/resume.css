@@ -6,9 +6,14 @@
   padding-left: 40px;
 }
 
-#spacingbottomtop {
+#spacingcontent {
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+#spacingheaders {
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 #indentlists {
