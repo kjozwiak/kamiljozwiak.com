@@ -19,12 +19,20 @@ app.get('/resume', function(req, res) {
   res.render('resume', { pageTitle: NAME + 'Resume'});
 });
 
-app.get('/contact', function(req, res) {
-  res.render('contact', { pageTitle: NAME + 'Contact'});
+app.get('/projects', function(req, res) {
+  res.render('projects', { pageTitle: NAME + 'Projects'});
+});
+
+app.get('/links', function(req, res) {
+  res.render('links', { pageTitle: NAME + 'Links'});
 });
 
 app.get('/about', function(req, res) {
   res.render('about', { pageTitle: NAME + 'About'});
+});
+
+app.get('/contact', function(req, res) {
+  res.render('contact', { pageTitle: NAME + 'Contact'});
 });
 
 app.listen(PORT, function() {

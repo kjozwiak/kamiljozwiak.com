@@ -1,0 +1,16 @@
+extends layout
+
+block contentHeader
+  link(rel='stylesheet' type='text/css' href='/static/css/links.css')
+
+block mainContent
+  #linkscontainer
+    h2 Links
+    #spacingheaders
+    | This is just a simple list of all the websites/resources that I think are awesome and definitely worth checking out:
+    #spacingcontent
+    #indentlists
+      li: :markdown
+          [Brian Bondy's Blog:] (http://www.brianbondy.com/) Blogs about all the new features he's working at Mozilla including a wealth of other useful information
+      li: :markdown
+          [Code Firefox:] (http://codefirefox.com/) Want to start contributing to Mozilla? Not sure where to start? This should be the first website you check out
