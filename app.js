@@ -1,7 +1,7 @@
 var express = require('express'),
     app = express();
-
 var RSS = require('rss');
+var fs = require('fs');
 
 // Configuration
 const PORT = 22935;
@@ -41,8 +41,12 @@ app.listen(PORT, function() {
   console.log("Starting server on port %d in %s mode:", PORT, app.settings.env);
 });
 
-// creating the RSS feed
+// loading JSON into memory
+fs.readFile(__dirname + '/data/blogPosts.json', 'utf8', function(err, data) {
+  var blogArray = JSON.parse(data);
+});
 
+// creating the RSS feed
 app.get('/feed/rss', function(req, res) {
   var feed = new RSS ({
     title: 'Kamil Jozwiaks Blog',
