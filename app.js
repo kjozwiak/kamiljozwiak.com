@@ -2,6 +2,7 @@ var express = require('express'),
     app = express();
 var RSS = require('rss');
 var fs = require('fs');
+var blogArray;
 
 // Configuration
 const PORT = 22935;
@@ -14,7 +15,7 @@ app.set('view options', { layout: false, prett: true });
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
-  res.render('index', { pageTitle: NAME + 'Blog'});
+  res.render('index', { pageTitle: NAME + 'Blog', blogArray: blogArray});
 });
 
 app.get('/resume', function(req, res) {
@@ -37,13 +38,16 @@ app.get('/contact', function(req, res) {
   res.render('contact', { pageTitle: NAME + 'Contact'});
 });
 
-app.listen(PORT, function() {
-  console.log("Starting server on port %d in %s mode:", PORT, app.settings.env);
-});
-
 // loading JSON into memory
 fs.readFile(__dirname + '/data/blogPosts.json', 'utf8', function(err, data) {
-  var blogArray = JSON.parse(data);
+  if (err) {
+    console.log('Error Found: ' + err);
+  }
+  blogArray = JSON.parse(data);
+
+  app.listen(PORT, function() {
+    console.log("Starting server on port %d in %s mode:", PORT, app.settings.env);
+  });
 });
 
 // creating the RSS feed
@@ -57,10 +61,10 @@ app.get('/feed/rss', function(req, res) {
   });
 
   feed.item({
-    title: 'Welcome to my blog!!',
-    description: 'Technologies used to create this blog and what to expect in future blog entries',
+    title: 'My journey on becoming a Mozilla contributor',
+    description: 'My personal experience and journey on becoming a Mozilla contributer',
     url: 'http://www.google.ca', //testing on live server
-    date: 'December 8, 2013'
+    date: 'Saturday January 4, 2014'
   });
 
   res.type('rss');
