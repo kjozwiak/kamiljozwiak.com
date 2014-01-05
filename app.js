@@ -1,14 +1,19 @@
+"use strict";
+
+// Imports needed modules
 var express = require('express'),
     app = express();
 var RSS = require('rss');
 var fs = require('fs');
+
+// Global variables
 var blogArray;
 var blogCount = 0;
 
 // Configuration
-const PORT = 22935;
-const AUDIENCE = "http://localhost:" + PORT;
-const NAME = "Kamil Jozwiak - ";
+var PORT = 22935;
+var AUDIENCE = "http://localhost:" + PORT;
+var NAME = "Kamil Jozwiak - ";
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
@@ -39,7 +44,7 @@ app.get('/contact', function(req, res) {
   res.render('contact', { pageTitle: NAME + 'Contact'});
 });
 
-// loading JSON & blogs into memory
+// Loading the JSON & blog files into an array (will eventually use redis, see Issue #8)
 fs.readFile(__dirname + '/data/blogPosts.json', 'utf8', function(err, data) {
   if (err) {
     console.log('Error Found: ' + err);
@@ -47,12 +52,13 @@ fs.readFile(__dirname + '/data/blogPosts.json', 'utf8', function(err, data) {
   blogArray = JSON.parse(data);
 
   blogArray.forEach(function(post, blogCount) {
-    fs.readFile(__dirname + '/data/blogs/' + blogArray[blogCount].slug + '.txt', 'utf8', function(err, fileData) {
+    blogCount++
+    fs.readFile(__dirname + '/data/blogs/' + blogArray[blogCount - 1].slug + '.txt', 'utf8', function(err, fileData) {
       if (err) {
         console.log('Error Found: ' + err);
       }
+      var currentCount = blogCount;
       post.data = fileData;
-      blogCount++;
       if (blogCount == blogArray.length) {
         app.listen(PORT, function() {
           console.log("Starting server on port %d in %s mode:", PORT, app.settings.env);
@@ -62,7 +68,7 @@ fs.readFile(__dirname + '/data/blogPosts.json', 'utf8', function(err, data) {
   });
 });
 
-// creating the RSS feed
+// RSS feed using node-rss
 app.get('/feed/rss', function(req, res) {
   var feed = new RSS ({
     title: 'Kamil Jozwiaks Blog',
