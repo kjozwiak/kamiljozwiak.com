@@ -11,3 +11,6 @@ block mainContent
     each blog in blogArray
       p.blogTitle= blog.title
       p.blogDates= "Posted on: " + blog.postedOnDate + " - " + "Last Modified: " + blog.lastModifiedDate
+      #spacingHeader
+      p= blog.data
+      #spacingHeader

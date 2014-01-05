@@ -3,6 +3,7 @@ var express = require('express'),
 var RSS = require('rss');
 var fs = require('fs');
 var blogArray;
+var blogCount = 0;
 
 // Configuration
 const PORT = 22935;
@@ -38,15 +39,26 @@ app.get('/contact', function(req, res) {
   res.render('contact', { pageTitle: NAME + 'Contact'});
 });
 
-// loading JSON into memory
+// loading JSON & blogs into memory
 fs.readFile(__dirname + '/data/blogPosts.json', 'utf8', function(err, data) {
   if (err) {
     console.log('Error Found: ' + err);
   }
   blogArray = JSON.parse(data);
 
-  app.listen(PORT, function() {
-    console.log("Starting server on port %d in %s mode:", PORT, app.settings.env);
+  blogArray.forEach(function(post, blogCount) {
+    fs.readFile(__dirname + '/data/blogs/' + blogArray[blogCount].slug + '.txt', 'utf8', function(err, fileData) {
+      if (err) {
+        console.log('Error Found: ' + err);
+      }
+      post.data = fileData;
+      blogCount++;
+      if (blogCount == blogArray.length) {
+        app.listen(PORT, function() {
+          console.log("Starting server on port %d in %s mode:", PORT, app.settings.env);
+        });
+      }
+    });
   });
 });
 
