@@ -51,15 +51,15 @@ fs.readFile(__dirname + '/data/blogPosts.json', 'utf8', function(err, data) {
   }
   blogArray = JSON.parse(data);
 
-  blogArray.forEach(function(post, blogCount) {
+  blogArray.forEach(function(post) {
     blogCount++
+    var currentCount = blogCount;
     fs.readFile(__dirname + '/data/blogs/' + blogArray[blogCount - 1].slug + '.txt', 'utf8', function(err, fileData) {
       if (err) {
         console.log('Error Found: ' + err);
       }
-      var currentCount = blogCount;
       post.data = fileData;
-      if (blogCount == blogArray.length) {
+      if (currentCount == blogArray.length) {
         app.listen(PORT, function() {
           console.log("Starting server on port %d in %s mode:", PORT, app.settings.env);
         });
