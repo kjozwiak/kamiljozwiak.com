@@ -9,7 +9,6 @@ var fs = require('fs');
 // Global variables
 var blogArray;
 var blogCount = 0;
-var rssCount = 0;
 
 // Configuration
 var PORT = 22935;
@@ -81,12 +80,11 @@ app.get('/feed/rss', function(req, res) {
 
   blogArray.forEach(function(rssItem) {
     feed.item({
-      title: blogArray[rssCount].title,
-      description: blogArray[rssCount].description,
-      url: blogArray[rssCount].URL,
-      date: blogArray[rssCount].postedOnDate
+      title: rssItem.title,
+      description: rssItem.description,
+      url: rssItem.URL,
+      date: rssItem.postedOnDate
     });
-    rssCount++;
   });
 
   res.type('rss');
