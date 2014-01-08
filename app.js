@@ -9,6 +9,7 @@ var fs = require('fs');
 // Global variables
 var blogArray;
 var blogCount = 0;
+var rssCount = 0;
 
 // Configuration
 var PORT = 22935;
@@ -78,11 +79,14 @@ app.get('/feed/rss', function(req, res) {
     language: 'en'
   });
 
-  feed.item({
-    title: 'My journey on becoming a Mozilla contributor',
-    description: 'My personal experience and journey on becoming a Mozilla contributer',
-    url: 'http://www.google.ca', //testing on live server
-    date: 'Saturday January 4, 2014'
+  blogArray.forEach(function(rssItem) {
+    feed.item({
+      title: blogArray[rssCount].title,
+      description: blogArray[rssCount].description,
+      url: blogArray[rssCount].URL,
+      date: blogArray[rssCount].postedOnDate
+    });
+    rssCount++;
   });
 
   res.type('rss');
