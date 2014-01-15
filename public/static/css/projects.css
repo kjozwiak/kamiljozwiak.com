@@ -6,9 +6,13 @@
   padding-left: 40px;
 }
 
-#status {
+.status {
   color: #008000;
   font-style: italic;
+}
+
+.git {
+  text-decoration: none;
 }
 
 #spacing {
