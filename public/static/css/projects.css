@@ -6,12 +6,22 @@
   padding-left: 40px;
 }
 
-.status {
+.statusOngoing {
+  color: #FF0000;
+  font-style: italic;
+}
+
+.statusCompleted {
   color: #008000;
   font-style: italic;
 }
 
-.git {
+.books {
+  font-weight: bolder;
+  font-style: italic;
+}
+
+.externalLinks {
   text-decoration: none;
 }
 
