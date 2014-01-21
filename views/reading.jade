@@ -1,0 +1,53 @@
+extends layout
+
+block contentHeader
+  link(rel='stylesheet' type='text/css' href='/static/css/reading.css')
+
+block mainContent
+  #projectscontainer
+    h2 Current Reading List
+    #spacing
+      :markdown
+        The following is a list of books that I am currently reading, have read or plan on reading in the near future:
+    #spacing
+      :markdown
+        A Game of Thrones (A Song of Ice and Fire, Book #1)
+      h5 Current Status:
+        span.statusCompleted  Competed (2013)
+      a.externalLinks(href='http://www.amazon.com/Game-Thrones-Song-Fire-Book/dp/0553593714/', target='_blank')  [Amazon]
+    #bookSpacing
+      :markdown
+        A Clash of Kings (A Song of Ice and Fire, Book #2)
+      h5 Current Status:
+        span.statusCompleted  Competed (2013)
+      a.externalLinks(href='http://www.amazon.com/Clash-Paperback-Author-George-Martin/dp/B00EOHJ5FQ', target='_blank')  [Amazon]
+    #bookSpacing
+      :markdown
+        A Storm of Swords (A Song of Ice and Fire, Book #3)
+      h5 Current Status:
+        span.statusCompleted  Competed (2013)
+      a.externalLinks(href='http://www.amazon.com/Storm-Swords-Song-Fire-Book/dp/055357342X', target='_blank')  [Amazon]
+    #bookSpacing
+      :markdown
+        A Feast of Crows (A Song of Ice and Fire, Book #4)
+      h5 Current Status:
+        span.statusOngoing  In Progress
+      a.externalLinks(href='http://www.amazon.com/Feast-Crows-Song-Fire-Thrones/dp/055358202X/', target='_blank')  [Amazon]
+    #bookSpacing
+      :markdown
+        JavaScript: The Definitive Guide: Activate Your Web Pages
+      h5 Current Status:
+        span.statusOngoing  In Queue
+      a.externalLinks(href='http://www.amazon.com/JavaScript-Definitive-Guide-Activate-Guides/dp/0596805527', target='_blank')  [Amazon]
+    #bookSpacing
+      :markdown
+        Effective JavaScript: 68 Specific Ways to Harness the Power of JavaScript
+      h5 Current Status:
+        span.statusOngoing  In Queue
+      a.externalLinks(href='http://www.amazon.com/Effective-JavaScript-Specific-Software-Development/dp/0321812182/', target='_blank')  [Amazon]
+    #bookSpacing
+      :markdown
+        JavaScript: The Good Parts
+      h5 Current Status:
+        span.statusOngoing  In Queue
+      a.externalLinks(href='http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742/', target='_blank')  [Amazon]

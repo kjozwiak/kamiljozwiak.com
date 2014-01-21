@@ -32,6 +32,10 @@ app.get('/projects', function(req, res) {
   res.render('projects', { pageTitle: NAME + 'Projects'});
 });
 
+app.get('/reading', function(req, res) {
+  res.render('reading', { pageTitle: NAME + 'Reading List'});
+});
+
 app.get('/links', function(req, res) {
   res.render('links', { pageTitle: NAME + 'Links'});
 });
