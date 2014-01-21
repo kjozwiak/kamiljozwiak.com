@@ -30,6 +30,11 @@
   padding-bottom: 8px;
 }
 
+#bookSpacing {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
 #indentlists {
   padding-left: 30px;
 }
