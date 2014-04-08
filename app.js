@@ -48,6 +48,10 @@ app.get('/contact', function(req, res) {
   res.render('contact', { pageTitle: NAME + 'Contact'});
 });
 
+app.get('/mozilla', function(req, res) {
+  res.render('index.html', { pageTitle: NAME + 'Telemetry Experiments'});
+});
+
 // Loading the JSON & blog files into an array (will eventually use redis, see Issue #8)
 fs.readFile(__dirname + '/data/blogPosts.json', 'utf8', function(err, data) {
   if (err) {
