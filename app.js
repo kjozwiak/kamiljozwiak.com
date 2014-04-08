@@ -19,6 +19,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.set('view options', { layout: false, prett: true });
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/mozilla'));
 
 app.get('/', function(req, res) {
   res.render('index', { pageTitle: NAME + 'Blog', blogArray: blogArray});
