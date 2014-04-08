@@ -49,7 +49,7 @@ app.get('/contact', function(req, res) {
 });
 
 app.get('/mozilla', function(req, res) {
-  res.render('index.html');
+  res.render('/mozilla/index.html');
 });
 
 // Loading the JSON & blog files into an array (will eventually use redis, see Issue #8)
