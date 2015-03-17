@@ -5,6 +5,7 @@ var express = require('express'),
     app = express();
 var RSS = require('rss');
 var fs = require('fs');
+var helmet = require('helmet');
 
 // Global variables
 var blogArray;
@@ -20,6 +21,22 @@ app.set('view engine', 'jade');
 app.set('view options', { layout: false, prett: true });
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/mozilla'));
+
+// csp policy directives using helmet
+// defaultSrc directive covers child-src, connect-src, font-src, 
+// img-src, media-src, object-src, script-src, style-src if not specified
+
+app.use(helmet.csp({
+  defaultSrc: ["'self'",],
+  scriptSrc: ["'self'", 'www.google-analytics.com/analytics.js'],
+  styleSrc: ["'self'", 'maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'],
+  fontSrc: ["'self'", 'maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/'],
+  frameSrc: ["'self'"],
+  reportOnly: false, // set to true if you only want to report errors
+  setAllHeaders: false, // set to true if you want to set all headers
+  disableAndroid: false, // set to true to disable CSP on Android (can be flaky)
+  safari5: false // set to true if you want to force buggy CSP in Safari 5
+}));
 
 app.get('/', function(req, res) {
   res.render('index', { pageTitle: NAME + 'Blog', blogArray: blogArray});
